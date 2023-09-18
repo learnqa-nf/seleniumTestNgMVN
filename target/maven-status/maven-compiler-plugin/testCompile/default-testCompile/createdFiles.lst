@@ -1,0 +1,6 @@
+elements\NewAccountPage.class
+definition\PracticeFormDefinition.class
+insurance\FillSignupForm.class
+elements\DashhboardPage.class
+runner\Signup.class
+action\BaseAction.class
