@@ -8,17 +8,29 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class PracticeFormDefinition {
     public WebDriver driver;
     @Given("user open practice form")
     public void user_open_practice_form() {
+        // Specify the allowed IP address
+        String allowedIp = "192.168.1.5";
+
+        // Create ChromeOptions
+        ChromeOptions options = new ChromeOptions();
+
+        // Add the --allowed-ips switch with the allowed IP
+        options.addArguments("--allowed-ips=" + allowedIp);
+
+        // Set up ChromeDriver with the configured options
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
+
+        // Navigate to the URL and maximize the window
         driver.get("https://demoqa.com/automation-practice-form");
         driver.manage().window().maximize();
-
     }
 
     @When("user input firstName and LastName")
