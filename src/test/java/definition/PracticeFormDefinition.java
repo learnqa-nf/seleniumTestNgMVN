@@ -29,7 +29,7 @@ public class PracticeFormDefinition {
         driver = new ChromeDriver(options);
 
         // Navigate to the URL and maximize the window
-        driver.get("https://demoqa.com/automation-practice-form");
+        driver.get("https://demoq.com/automation-practice-form");
         driver.manage().window().maximize();
         Thread.sleep(2000);
     }
