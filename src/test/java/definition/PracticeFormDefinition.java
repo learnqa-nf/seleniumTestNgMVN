@@ -15,56 +15,45 @@ public class PracticeFormDefinition {
     public WebDriver driver;
     @Given("user open practice form")
     public void user_open_practice_form() throws InterruptedException {
-        // Specify the allowed IP address
-        String allowedIp = "192.168.1.8";
-
-        // Create ChromeOptions
-        ChromeOptions options = new ChromeOptions();
-
-        // Add the --allowed-ips switch with the allowed IP
-        options.addArguments("--allowed-ips=" + allowedIp);
-
         // Set up ChromeDriver with the configured options
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
 
         // Navigate to the URL and maximize the window
-        driver.get("https://demoq.com/automation-practice-form");
+        driver.get("https://demoqa.com/automation-practice-form");
         driver.manage().window().maximize();
-        Thread.sleep(2000);
     }
 
     @When("user input firstName and LastName")
     public void user_input_first_name_and_last_name() throws InterruptedException {
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Jhon");
-        Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Doe");
 
     }
 
     @And("input email")
     public void input_email() throws InterruptedException {
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath("//*[@id='userEmail']")).sendKeys("jhon.doe@gmail.com");
     }
 
     @And("user choose gender")
     public void user_choose_gender() throws InterruptedException {
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath("//label[normalize-space()='Male']")).click();
 
     }
 
     @And("input mobile number")
     public void input_mobile_number() throws InterruptedException {
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath("//input[@id='userNumber']")).sendKeys("081908754411");
     }
 
     @And("input date of birth")
     public void input_date_of_birth() throws InterruptedException {
-        Thread.sleep(2000);
+       
         driver.close();
 //        WebElement datePicker = driver.findElement(By.xpath("//div[@class='react-datepicker__input-container']/input"));
 //        datePicker.clear();
