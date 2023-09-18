@@ -53,7 +53,7 @@ public class PracticeFormDefinition {
 
     @And("input date of birth")
     public void input_date_of_birth() throws InterruptedException {
-       
+
         driver.close();
 //        WebElement datePicker = driver.findElement(By.xpath("//div[@class='react-datepicker__input-container']/input"));
 //        datePicker.clear();
