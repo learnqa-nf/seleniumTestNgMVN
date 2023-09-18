@@ -7,14 +7,15 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class PracticeFormDefinition {
     public WebDriver driver;
     @Given("user open practice form")
     public void user_open_practice_form() {
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.get("https://demoqa.com/automation-practice-form");
         driver.manage().window().maximize();
 

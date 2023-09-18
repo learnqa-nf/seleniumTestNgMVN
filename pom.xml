@@ -36,11 +36,6 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-<!--                    <systemPropertyVariables>-->
-<!--                        <extent.reporter.spark.start>true</extent.reporter.spark.start>-->
-<!--                        <extent.reporter.spark.out>test-output/SparkReport/Spark.html</extent.reporter.spark.out>-->
-<!--                    </systemPropertyVariables>-->
-                    <reportsDirectory>${project.build.directory}/test-output</reportsDirectory>
                 </configuration>
             </plugin>
         </plugins>
