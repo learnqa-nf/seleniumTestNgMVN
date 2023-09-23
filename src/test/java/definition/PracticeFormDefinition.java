@@ -10,24 +10,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class PracticeFormDefinition {
     public WebDriver driver;
     @Given("user open practice form")
     public void user_open_practice_form() throws InterruptedException {
         // Set up ChromeDriver with the configured options
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
 
         // Navigate to the URL and maximize the window
         driver.get("https://demoqa.com/automation-practice-form");
         driver.manage().window().maximize();
-        System.out.println("test 0");
+
     }
 
     @When("user input firstName and LastName")
     public void user_input_first_name_and_last_name() throws InterruptedException {
-        Thread.sleep(5000);
+
         System.out.println("test 1");
         driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Jhon");
         driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Doe");
@@ -35,26 +36,25 @@ public class PracticeFormDefinition {
     }
 
     @And("input email")
-    public void input_email() throws InterruptedException {
-        System.out.println("test 2");
+    public void input_email() {
         driver.findElement(By.xpath("//*[@id='userEmail']")).sendKeys("jhon.doe@gmail.com");
     }
 
     @And("user choose gender")
-    public void user_choose_gender() throws InterruptedException {
+    public void user_choose_gender() {
 
         driver.findElement(By.xpath("//label[normalize-space()='Male']")).click();
 
     }
 
     @And("input mobile number")
-    public void input_mobile_number() throws InterruptedException {
+    public void input_mobile_number() {
 
         driver.findElement(By.xpath("//input[@id='userNumber']")).sendKeys("081908754411");
     }
 
     @And("input date of birth")
-    public void input_date_of_birth() throws InterruptedException {
+    public void input_date_of_birth() {
 
         driver.close();
 //        WebElement datePicker = driver.findElement(By.xpath("//div[@class='react-datepicker__input-container']/input"));
