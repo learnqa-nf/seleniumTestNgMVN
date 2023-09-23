@@ -17,8 +17,8 @@ public class PracticeFormDefinition {
     @Given("user open practice form")
     public void user_open_practice_form() throws InterruptedException {
         // Set up ChromeDriver with the configured options
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
 
         // Navigate to the URL and maximize the window
         driver.get("https://demoqa.com/automation-practice-form");
