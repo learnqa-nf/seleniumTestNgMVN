@@ -22,11 +22,13 @@ public class PracticeFormDefinition {
         // Navigate to the URL and maximize the window
         driver.get("https://demoqa.com/automation-practice-form");
         driver.manage().window().maximize();
+        System.out.println("test 0");
     }
 
     @When("user input firstName and LastName")
     public void user_input_first_name_and_last_name() throws InterruptedException {
         Thread.sleep(5000);
+        System.out.println("test 1");
         driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Jhon");
         driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Doe");
 
@@ -34,7 +36,7 @@ public class PracticeFormDefinition {
 
     @And("input email")
     public void input_email() throws InterruptedException {
-
+        System.out.println("test 2");
         driver.findElement(By.xpath("//*[@id='userEmail']")).sendKeys("jhon.doe@gmail.com");
     }
 
