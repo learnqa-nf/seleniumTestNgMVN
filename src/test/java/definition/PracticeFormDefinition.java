@@ -17,8 +17,8 @@ public class PracticeFormDefinition {
     @Given("user open practice form")
     public void user_open_practice_form() throws InterruptedException {
         // Set up ChromeDriver with the configured options
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
 
         // Navigate to the URL and maximize the window
         driver.get("https://demoqa.com/automation-practice-form");
@@ -29,7 +29,6 @@ public class PracticeFormDefinition {
     @When("user input firstName and LastName")
     public void user_input_first_name_and_last_name() throws InterruptedException {
 
-        System.out.println("test 1");
         driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Jhon");
         driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Doe");
 
