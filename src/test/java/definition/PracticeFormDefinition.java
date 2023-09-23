@@ -26,7 +26,7 @@ public class PracticeFormDefinition {
 
     @When("user input firstName and LastName")
     public void user_input_first_name_and_last_name() throws InterruptedException {
-
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Jhon");
         driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Doe");
 
