@@ -6,4 +6,9 @@
             <class name="runner.Signup" />
         </classes>
     </test>
+    <test name="MyTest2">
+        <classes>
+            <class name="runner.Signup" />
+        </classes>
+    </test>
 </suite>
